@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col h-screen justify-center container mx-auto px-4">
       <div className="flex flex-col items-center justify-center text-center">
-        <div className="flex flex-row text-5xl md:text-8xl font-bold gap-2">
+        <div className="flex flex-col md:flex-row text-6xl md:text-8xl font-bold gap-2">
           <span className="text-gray-800 opacity-80">Caroline</span>
           <span className="text-pink-500">Marchesin</span>
         </div>
