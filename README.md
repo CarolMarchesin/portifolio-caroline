@@ -1,6 +1,7 @@
 # Projeto Portifólio - Next.js com Tailwind CSS, React e TypeScript
 
 Este projeto é meu portifólio, desenvolvido com Next.js, React, Tailwind CSS e TypeScript.
+Link para acesso (https://portifolio-caroline.vercel.app/)
 
 ## Tecnologias Utilizadas
 
@@ -33,12 +34,12 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 4. Execute o projeto:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
