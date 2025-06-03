@@ -33,12 +33,12 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 4. Execute o projeto:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
