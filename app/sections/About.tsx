@@ -1,68 +1,67 @@
+"use client";
+
 import Image from "next/image";
 import profilePic from "../assets/images/profile.jpg";
-import { Github, Linkedin, Mail } from "lucide-react";
+import moment from "moment";
+import { useEffect, useState } from "react";
 
 export default function About() {
-  return (
-    <section id="about" className="min-h-screen relative flex flex-col container mx-auto px-4 py-10 items-center justify-center">
-      <div className="flex flex-row items-center justify-center gap-2 font-bold text-4xl md:text-5xl">
-        <span className="text-gray-800 opacity-80">Sobre </span>
-        <span className="text-pink-500">Mim</span>
-      </div>
+  const [yearsOfExperience, setYearsOfExperience] = useState<number>(0);
 
-      <div className="flex flex-col text-center md:text-left md:flex-row mt-10 gap-12 items-center justify-center mx-auto max-w-6xl ">
-        <div>
-          <div className="bg-white w-80 h-80 rounded-full border-4 border-pink-300 shadow-lg shadow-pink-300">
-            <Image
-              src={profilePic}
-              alt="Profile Picture"
-              className="rounded-full w-78 h-78 object-cover"
-            />
-          </div>
+  function calculateYearsOfExperience(): void {
+    const startYear = 2022;
+    const currentYear = moment().year();
+    const yearsOfExperience = currentYear - startYear;
+
+    setYearsOfExperience(yearsOfExperience);
+  }
+
+  useEffect(() => {
+    calculateYearsOfExperience();
+  }, []);
+
+  return (
+    <section id="about" className="container mt-32 xl:max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 items-center justify-items-center gap-10">
+        <div className="mx-auto relative flex items-center justify-center w-78 h-78">
+          <div className="absolute inset-0 bg-pink-500 rounded-full blur-lg z-0 opacity-75" />
+          <Image
+            src={profilePic}
+            alt="Caroline Marchesin"
+            className="rounded-full w-64 h-64 z-10 object-cover"
+            width={256}
+            height={256}
+          />
         </div>
 
-        <div className="text-gray-800 opacity-70 text-lg md:text-xl leading-relaxed">
-          <p className="mb-6 font-bold">
-              Olá, eu sou a Caroline Marchesin da Silva!
+        <div>
+          <p className="flex-1 text-4xl font-bold text-pink-600 mx-10 text-center md:text-left">
+            Sobre Mim
           </p>
 
-          <p>
-            Sou desenvolvedora front-end e adoro transformar ideias em
-            experiências digitais incríveis, permitindo que todos aproveitem a
-            tecnologia de forma simples e intuitiva.
-          </p>
-          
-          <p className="mt-4">
-            Com experiência em HTML, CSS, Vue, React, React Native e design de
-            interfaces, trabalho criando aplicações web e mobile que aliam
-            beleza, desempenho e usabilidade.
-          </p>
+          <div className=" text-muted-foreground text-lg mx-10 mt-10 text-justify">
+            <p>
+              Olá! Sou Caroline Marchesin, desenvolvedora front-end apaixonada
+              por criar soluções digitais elegantes e funcionais. Com{" "}
+              {yearsOfExperience} anos de experiência, atuo no desenvolvimento
+              web e mobile, utilizando tecnologias e ferramentas modernas.
+            </p>
 
-          <br />
+            <br />
 
-          <div className="flex justify-center md:justify-start gap-4 pb-10">
-            <a
-              href="https://github.com/CarolMarchesin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-pink-500 hover:text-pink-600 transition-colors"
-            >
-              <Github size={26} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/carolinemarchesindasilva/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-pink-500 hover:text-pink-600 transition-colors"
-            >
-              <Linkedin size={26} />
-            </a>
-            <a
-              href="mailto:carol_marchesin@hotmail.com"
-              className="p-2 text-pink-500 hover:text-pink-600 transition-colors"
-            >
-              <Mail size={26} />
-            </a>
+            <p>
+              Minha trajetória começou no back-end, com RPAs e automações, mas
+              foi no front-end que descobri minha verdadeira paixão. Desde
+              então, venho me especializando e aprimorando constantemente minhas
+              habilidades.
+            </p>
+
+            <br />
+
+            <p>
+              Acredito que estética e usabilidade são essenciais para uma boa
+              experiência digital.
+            </p>
           </div>
         </div>
       </div>
