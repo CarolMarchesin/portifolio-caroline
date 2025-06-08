@@ -1,41 +1,49 @@
-import Button from "../components/Button";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { SkillsGroup } from "../utils/skills"
 
 export default function Skills() {
-  const Skills = [
-    "React",
-    "Next.js",
-    "Vue",
-    "Quasar",
-    "React Native",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Git",
-    "GitHub",
-    "Figma",
-    "UX/UI Design",
-    "Teste Unitário",
-  ];
-
-  const renderSkills = Skills.map((skill) => (
-    <Button
-      key={skill}
-      title={skill}
-      variant="secondary"
-      className="mb-4 bg-white hover:bg-gray-100"
-    />
-  ));
-
   return (
-    <section className="min-h-screen relative flex flex-col bg-pink-100 container mx-auto px-4 py-10 items-center justify-center">
-      <div className="flex flex-row items-center justify-center gap-2 font-bold text-4xl md:text-5xl">
-        <span className="text-gray-800 opacity-80">Habilidades</span>
-        <span className="text-pink-500">Técnicas</span>
-      </div>
+    <section id="skills" className="container mt-32 xl:max-w-7xl mx-auto">
+      <div className="flex flex-col items-center">
+        <p className="text-4xl font-bold text-pink-600">Minhas Habilidades</p>
+        <p className="text-muted-foreground mt-10 text-lg">
+          Tecnologias e ferramentas utilizadas durante minha jornada
+        </p>
 
-      <div className="mt-15 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-6xl">
-        {renderSkills}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mt-15">
+          {SkillsGroup.map((skill) => (
+            <motion.div
+              key={skill.name}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+            >
+              <Button
+                key={skill.name}
+                variant="outline"
+                className="w-70 h-full p-8 flex flex-col gap-2 justify-start items-start"
+              >
+                <div className="flex flex-row items-center gap-2 justify-start w-full">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-pink-500 to-fuchsia-400 shadow-lg">
+                    <skill.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-bold">{skill.name}</p>
+                </div>
+
+                {skill.itens && (
+                  <ul className="list-disc list-inside text-muted-foreground text-lg mt-2 text-left marker:text-pink-400">
+                    {skill.itens.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </Button>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
