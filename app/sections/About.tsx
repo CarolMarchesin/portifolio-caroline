@@ -39,7 +39,7 @@ export default function About() {
             Sobre Mim
           </p>
 
-          <div className=" text-muted-foreground text-lg mx-10 mt-10 text-justify">
+          <div className="text-muted-foreground text-lg mx-10 mt-10 text-justify">
             <p>
               Olá! Sou Caroline Marchesin, desenvolvedora front-end apaixonada
               por criar soluções digitais elegantes e funcionais. Com{" "}
