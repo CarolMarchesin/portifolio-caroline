@@ -27,7 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen container mt-32">
+    <section className="container mt-32">
       <div className="flex flex-col items-center justify-center text-center">
         <div className="flex flex-row md:flex-row text-6xl md:text-8xl font-bold">
           <span>Olá, eu sou</span>
@@ -68,7 +68,7 @@ export default function Hero() {
             <Link href="/contact">Entrar em contato</Link>
           </Button>
           
-          <Button asChild variant="outline" className="text-pink-600 border-pink-600 h-10 w-40 bg-transparent border">
+          <Button asChild variant="outline" className="dark:text-white border-pink-600 h-10 w-40 bg-transparent border hover:text-pink-600">
             <Link href="/projects">Ver projetos</Link>
           </Button>
         </motion.div>
