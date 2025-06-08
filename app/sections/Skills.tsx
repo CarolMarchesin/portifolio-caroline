@@ -8,12 +8,12 @@ export default function Skills() {
   return (
     <section id="skills" className="container mt-32 xl:max-w-7xl mx-auto">
       <div className="flex flex-col items-center">
-        <p className="text-4xl font-bold text-pink-600">Minhas Habilidades</p>
-        <p className="text-muted-foreground mt-10 text-lg">
+        <p className="text-center text-4xl font-bold text-pink-600">Minhas Habilidades</p>
+        <p className="text-center text-muted-foreground mt-10 text-lg">
           Tecnologias e ferramentas utilizadas durante minha jornada
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mt-15">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-15">
           {SkillsGroup.map((skill) => (
             <motion.div
               key={skill.name}
