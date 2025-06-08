@@ -30,7 +30,7 @@ export default function Skills() {
                   <div className="p-3 rounded-lg bg-gradient-to-r from-pink-500 to-fuchsia-400 shadow-lg">
                     <skill.icon className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-lg text-white font-bold">{skill.name}</p>
+                  <p className="text-lg text-muted-foreground dark:text-white font-bold">{skill.name}</p>
                 </div>
 
                 {skill.itens && (
