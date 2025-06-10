@@ -23,12 +23,12 @@ export default function About() {
   return (
     <section id="about" className="container mt-32 xl:max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 items-center justify-items-center gap-10">
-        <div className="mx-auto relative flex items-center justify-center w-78 h-78">
+        <div className="mx-auto relative flex items-center justify-center w-88 h-88">
           <div className="absolute inset-0 bg-pink-500 rounded-full blur-lg z-0 opacity-75" />
           <Image
             src={profilePic}
             alt="Caroline Marchesin"
-            className="rounded-full w-64 h-64 z-10 object-cover"
+            className="rounded-full w-74 h-74 z-10 object-cover"
             width={256}
             height={256}
           />

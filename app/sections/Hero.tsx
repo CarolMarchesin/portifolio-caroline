@@ -55,7 +55,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Especializado em criar experiências digitais excepcionais com tecnologias modernas
+          Criação digital com foco em estética, performance e usabilidade.
         </motion.p>
 
         <motion.div
@@ -64,11 +64,18 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Button asChild className="bg-pink-600 text-white hover:bg-pink-700 h-10 w-40">
+          <Button
+            asChild
+            className="bg-pink-600 text-white hover:bg-pink-700 h-10 w-40"
+          >
             <Link href="/contact">Entrar em contato</Link>
           </Button>
-          
-          <Button asChild variant="outline" className="dark:text-white border-pink-600 h-10 w-40 bg-transparent border hover:text-pink-600">
+
+          <Button
+            asChild
+            variant="outline"
+            className="dark:text-white border-pink-600 h-10 w-40 bg-transparent border hover:text-pink-600"
+          >
             <Link href="/projects">Ver projetos</Link>
           </Button>
         </motion.div>
