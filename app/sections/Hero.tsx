@@ -68,7 +68,7 @@ export default function Hero() {
             asChild
             className="bg-pink-600 text-white hover:bg-pink-700 h-10 w-40"
           >
-            <Link href="/contact">Entrar em contato</Link>
+            <Link href="#contact">Entrar em contato</Link>
           </Button>
 
           <Button
@@ -76,7 +76,7 @@ export default function Hero() {
             variant="outline"
             className="dark:text-white border-pink-600 h-10 w-40 bg-transparent border hover:text-pink-600"
           >
-            <Link href="/projects">Ver projetos</Link>
+            <Link href="#about">Sobre mim</Link>
           </Button>
         </motion.div>
 
