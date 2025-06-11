@@ -1,5 +1,6 @@
 import { itemsContact } from "@/app/utils/contact";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export function Contact() {
   const renderContactInfo = () => {
@@ -15,7 +16,14 @@ export function Contact() {
             </div>
             <div className="flex flex-col items-center md:items-start">
               <span className="font-bold">{item.title}</span>
-              <span>{item.value}</span>
+              <Link 
+                href={item.link}
+                className="text-muted-foreground hover:text-pink-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.value}
+              </Link>
             </div>
           </div>
         ))}
