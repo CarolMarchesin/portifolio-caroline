@@ -4,6 +4,9 @@ import Image from "next/image";
 import profilePic from "../assets/images/profile.jpg";
 import moment from "moment";
 import { useEffect, useState } from "react";
+import { Card } from "@/components/ui/card";
+import { itemsAbout } from "@/app/utils/about";
+import { motion } from "framer-motion";
 
 export default function About() {
   const [yearsOfExperience, setYearsOfExperience] = useState<number>(0);
@@ -62,6 +65,30 @@ export default function About() {
               Acredito que estética e usabilidade são essenciais para uma boa
               experiência digital.
             </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-10 mx-10">
+            {itemsAbout.map((item) => (
+              <motion.div
+                whileHover={{ scale: 1.02, y: -2 }}
+                transition={{ duration: 0.3 }}
+                className="w-full sm:w-1/2"
+                key={item.title}
+              >
+                <Card className="p-4 border border-pink-500/30 bg-card/50 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300 group">
+                  <div className="text-base font-semibold text-pink-500 flex items-center gap-2 group-hover:text-pink-400 transition-colors">
+                    <item.icon className="w-6 h-6" />
+                    {item.title}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    <div className="font-medium">{item.value}</div>
+                    <div className="text-xs text-muted-foreground/80">
+                      {item.additional}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
