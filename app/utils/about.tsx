@@ -1,6 +1,13 @@
-import { GraduationCap, Briefcase } from "lucide-react";
+import { GraduationCap, Briefcase, LucideIcon } from "lucide-react";
 
-export const itemsAbout = [
+export interface AboutItem {
+  title: string;
+  value: string;
+  additional: string;
+  icon: LucideIcon;
+}
+
+export const itemsAbout: AboutItem[] = [
   {
     title: "Formação",
     value: "Segurança da Informação",

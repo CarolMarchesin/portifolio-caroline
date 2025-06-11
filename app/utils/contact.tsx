@@ -1,6 +1,12 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, LucideIcon } from "lucide-react";
 
-export const itemsContact = [
+export interface ContactItem {
+  title: string;
+  value: string;
+  icon: LucideIcon;
+}
+
+export const itemsContact: ContactItem[] = [
   {
     title: "Email",
     value: "carol_marchesin@hotmail.com",

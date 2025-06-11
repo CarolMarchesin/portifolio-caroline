@@ -1,6 +1,12 @@
-import { Code, Database, Globe, Palette, Smartphone, Zap } from "lucide-react";
+import { Code, Database, Globe, Palette, Smartphone, Zap, LucideIcon } from "lucide-react";
 
-export const SkillsGroup = [
+export interface SkillGroup {
+  name: string;
+  icon: LucideIcon;
+  itens: string[];
+}
+
+export const SkillsGroup: SkillGroup[] = [
   {
     name: "Front-End",
     icon: Globe,

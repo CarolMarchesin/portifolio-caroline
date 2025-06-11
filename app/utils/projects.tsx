@@ -1,8 +1,17 @@
 import ContaAzul from "@/app/assets/images/contaazul.png";
 import Imc from "@/app/assets/images/imc.webp";
 import Forca from "@/app/assets/images/forca.webp";
+import type { StaticImageData } from "next/image";
 
-export const myProjects = [
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: StaticImageData;
+  link: string;
+}
+
+export const myProjects: Project[] = [
   {
     id: 1,
     title: "Conta Azul",
